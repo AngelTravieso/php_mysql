@@ -37,6 +37,20 @@ while($nota = mysqli_fetch_assoc($query)) {
     echo "<hr>";
 }
 
+
+// Insertar en la BD desde PHP
+$sql = "INSERT INTO notas VALUES (NULL, 'Nota desde PHP', 'Esto es una nota de PHP', 'green')";
+
+$insert = mysqli_query($conexion, $sql);
+
+// comprobar si el insert se realizo correctamente
+if($insert) {
+    echo "Datos insertados correctamente";
+} else {
+    echo "Error: " . mysqli_error($conexion);
+}
+
+
 // echo "<pre>";
 // var_dump($notas);
 // echo "</pre>";
