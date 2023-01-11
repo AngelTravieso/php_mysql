@@ -21,6 +21,11 @@ $query = mysqli_query($conexion, "SELECT * FROM notas");
 // para recibir los datos del query como array asociativo
 // $notas = mysqli_fetch_assoc($query);
 
+/*
+    Se debe recorrer los resultados de la funcion
+    'mysqli_fetch_assoc() con while para listar
+    los registros de la tabla 
+*/
 while($nota = mysqli_fetch_assoc($query)) {
     // echo "<pre>";
     // var_dump($nota);
